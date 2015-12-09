@@ -1,7 +1,8 @@
 DEBUG?=0
+BREAKPOINT?=5
 
 #CXX=icc -gcc-name=gcc-4.7
-CXX=g++-4.8
+CXX=g++-4.9
 
 ifeq ($(DEBUG),1)
 CXXFLAGS=-DDEBUG -Wall -O0 -g -std=c++11
@@ -16,7 +17,7 @@ endif
 CXXFLAGS+=-fopenmp -DBREAKPOINT=$(BREAKPOINT)
 
 # Add Eigen path here
-CPPFLAGS=-I /home/tomh/usr/include/eigen3
+CPPFLAGS=-I/usr/local/include/eigen3
 
 VPATH=..
 LINK.o=$(CXX) $(CXXFLAGS) $(LDFLAGS)
