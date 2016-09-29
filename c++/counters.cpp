@@ -18,6 +18,7 @@
 Counter::Counter(std::string name)
     : name(name), diff(0), count(1), total_counter(false)
 {
+    Sys::cout() << "start " << name << std::endl;
     start = tick();
 }
 
@@ -27,6 +28,8 @@ Counter::Counter()
 
 Counter::~Counter() {
     static working_mutex mtx;
+
+    Sys::cout() << "stop " << name << std::endl;
 
     if(total_counter) return;
     stop = tick();

@@ -15,7 +15,7 @@ static int gaspi_free(int k = 0) {
     gaspi_queue_size_max(&queue_max); 
     gaspi_queue_size(k, &queue_size); 
     assert(queue_size <= queue_max);
-    //Sys::cout() << "used/max == " << queue_size << "/" << queue_max << std::endl;
+    Sys::cout() << "used/max == " << queue_size << "/" << queue_max << std::endl;
     return (queue_max - queue_size);
 }
 

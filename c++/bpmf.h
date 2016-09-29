@@ -16,7 +16,7 @@
 
 #include "counters.h"
 
-const int num_feat = 100;
+const int num_feat = 10;
 
 typedef Eigen::SparseMatrix<double> SparseMatrixD;
 typedef Eigen::Matrix<double, num_feat, num_feat> MatrixNNd;
